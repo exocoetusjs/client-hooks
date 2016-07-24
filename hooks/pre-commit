@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const path = require('path');
+
+const hookName = path.basename(__filename);
+
+console.log('hookName: ' + hookName);
+
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});

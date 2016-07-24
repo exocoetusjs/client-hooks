@@ -1,0 +1,25 @@
+{
+  "name": "client-hooks",
+  "version": "0.0.1",
+  "description": "plugin-based git hooks management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crux-wild/client-hooks"
+  },
+  "keywords": [
+    "git",
+    "hooks",
+    "client"
+  ],
+  "author": "crux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crux-wild/client-hooks/issues"
+  },
+  "homepage": "https://github.com/crux-wild/client-hooks#readme",
+  "dependencies": {}
+}
