@@ -13,7 +13,9 @@
   "keywords": [
     "git",
     "hooks",
-    "client"
+    "client",
+    "tool",
+    "validate",
   ],
   "author": "crux",
   "license": "MIT",
