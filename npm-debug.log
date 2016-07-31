@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'eslint-config-airbnb',
+1 verbose cli   'eslint-plugin-import',
+1 verbose cli   'eslint-plugin-react',
+1 verbose cli   'eslint-plugin-jsx-a11y',
+1 verbose cli   'eslint' ]
+2 info using npm@3.10.5
+3 info using node@v6.3.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly rollbackFailedOptional Starting
+8 silly rollbackFailedOptional Finishing
+9 silly runTopLevelLifecycles Starting
+10 silly runTopLevelLifecycles Finishing
+11 silly install printInstalled
+12 verbose stack Error: Failed to parse json
+12 verbose stack Trailing comma in array at 19:3
+12 verbose stack   ],
+12 verbose stack   ^
+12 verbose stack     at parseError (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
+12 verbose stack     at parseJson (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:79:23)
+12 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+12 verbose stack     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+12 verbose stack     at tryToString (fs.js:455:3)
+12 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
+13 verbose cwd /home/crux/Works/client-hooks
+14 error Linux 4.6.4-1-ARCH
+15 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save-dev" "eslint-config-airbnb" "eslint-plugin-import" "eslint-plugin-react" "eslint-plugin-jsx-a11y" "eslint"
+16 error node v6.3.1
+17 error npm  v3.10.5
+18 error file /home/crux/Works/client-hooks/package.json
+19 error code EJSONPARSE
+20 error Failed to parse json
+20 error Trailing comma in array at 19:3
+20 error   ],
+20 error   ^
+21 error File: /home/crux/Works/client-hooks/package.json
+22 error Failed to parse package.json data.
+22 error package.json must be actual JSON, not just JavaScript.
+22 error
+22 error This is not a bug in npm.
+22 error Tell the package author to fix their package.json file. JSON.parse
+23 verbose exit [ 1, true ]
