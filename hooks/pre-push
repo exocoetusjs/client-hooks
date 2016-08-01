@@ -4,4 +4,12 @@
 
 const path = require('path');
 
+const ClientHook = require('../lib/ClientHook.js');
+
+const cwd = process.cwd();
+
 const hookName = path.basename(__filename);
+
+const clientHook = new ClientHook({ hookName, cwd });
+
+clientHook.start();
