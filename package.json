@@ -1,9 +1,13 @@
 {
   "name": "client-hooks",
   "version": "0.0.1",
-  "description": "plugin-based git hooks management",
+  "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
+    "install": "bin/install.js",
+    "preinstall": "bin/preinstall.js",
+    "preuninstall": "bin/preuninstall.js",
+    "postuninstall": "bin/postuninstall.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,9 +19,12 @@
     "hooks",
     "client",
     "tool",
-    "validate",
+    "validate"
   ],
   "author": "crux",
+  "engines": {
+    "node": ">=6.3.1"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/crux-wild/client-hooks/issues"
