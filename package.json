@@ -30,5 +30,7 @@
     "url": "https://github.com/crux-wild/client-hooks/issues"
   },
   "homepage": "https://github.com/crux-wild/client-hooks#readme",
-  "dependencies": {}
+  "dependencies": {
+    "shelljs": "^0.7.3"
+  }
 }
