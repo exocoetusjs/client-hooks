@@ -3,5 +3,13 @@
 const shell = require('shelljs');
 
 if (shell.test('-f', './.gitconfig')) {
-  mv('./.gitconfig', './.gitconfig.bak');
+  shell.mv('./.gitconfig', './.gitconfig.bak');
 }
+
+shell.cp('./node_modules/client-hooks/.gitconfig', './gitconfig');
+
+if (shell.test('-f', './clienthooks.js')) {
+  shell.mv('./clienthooks.js', './clienthooks.js.bak');
+}
+
+shell.cp('./node_modules/clienthooks/clienthooks.js', 'clienthooks.js');
