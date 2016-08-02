@@ -3,9 +3,11 @@
 const shell = require('shelljs');
 
 if (shell.test('-f', './.gitconfig')) {
-  rm('./.gitconfig');
+  shell.rm('./.gitconfig');
 }
 
+shell.exec('git config --local --unset include.path');
+
 if (shell.test('-f', './clienthooks.js')) {
-  rm('./clienthooks.js');
+  shell.rm('./clienthooks.js');
 }
