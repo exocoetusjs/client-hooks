@@ -1,5 +1,5 @@
 # client-hooks
 
 ```javascript
-// @TODO: Extra ./plugins/* into npm.
+// @TODO: Extra ./plugins/* into npm package.
 ```
