@@ -14,8 +14,9 @@ if (shell.test('-f', './.gitconfig')) {
   shell.mv('./.gitconfig', './.gitconfig.bak');
 }
 
+console.log('copy `.gitconfig`...');
 shell.exec(`curl -fsSL ${gitconfigAddr}`)
-  .to(`${gitconfigAddr}`);
+  .to('.gitconfig');
 
 shell.exec(`git config --local include.path "../.gitconfig"`);
 
@@ -23,5 +24,6 @@ if (shell.test('-f', './clienthooks.js')) {
   shell.mv('./clienthooks.js', './clienthooks.js.bak');
 }
 
+console.log('copy `clienthooks.js`...');
 shell.exec(`curl -fsSL ${clienthooksConfigAddr}`)
-  .to(`${clienthooksConfigAddr}`);
+  .to('clienthooks.js');
