@@ -8,7 +8,7 @@ if (shell.test('-f', './.gitconfig')) {
   shell.mv('./.gitconfig', './.gitconfig.bak');
 }
 
-shell.cp('./node_modules/client-hooks/.gitconfig', './gitconfig');
+shell.cp('./node_modules/client-hooks/.gitconfig', './.gitconfig');
 
 shell.exec(`git config --local include.path "../.gitconfig"`);
 
