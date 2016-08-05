@@ -17,6 +17,7 @@ if (shell.test('-f', './.gitconfig')) {
 }
 
 console.log('copy `.gitconfig`...');
+
 shell.exec(`curl -fsSL ${gitconfigAddr}`)
   .to('.gitconfig');
 
@@ -27,5 +28,6 @@ if (shell.test('-f', './clienthooks.js')) {
 }
 
 console.log('copy `clienthooks.js`...');
+
 shell.exec(`curl -fsSL ${clienthooksConfigAddr}`)
   .to('./clienthooks.js');

@@ -4,6 +4,8 @@ const shell = require('shelljs');
 
 shell.config.fatal = true;
 
+shell.cd('../../');
+
 if (shell.test('-f', './.gitconfig')) {
   shell.rm('./.gitconfig');
 }
