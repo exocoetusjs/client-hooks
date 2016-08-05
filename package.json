@@ -4,10 +4,10 @@
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
-    "install": "scripts/install.js",
-    "preinstall": "scripts/preinstall.js",
-    "preuninstall": "scripts/preuninstall.js",
-    "postuninstall": "scripts/postuninstall.js",
+    "install": "node scripts/install.js",
+    "preinstall": "node scripts/preinstall.js",
+    "preuninstall": "node scripts/preuninstall.js",
+    "postuninstall": "node scripts/postuninstall.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
