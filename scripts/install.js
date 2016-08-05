@@ -10,6 +10,8 @@ const clienthooksConfigAddr = 'https://raw.githubusercontent.com/crux-wild/' +
 
 shell.config.fatal = true;
 
+shell.cd('../../');
+
 if (shell.test('-f', './.gitconfig')) {
   shell.mv('./.gitconfig', './.gitconfig.bak');
 }
@@ -26,4 +28,4 @@ if (shell.test('-f', './clienthooks.js')) {
 
 console.log('copy `clienthooks.js`...');
 shell.exec(`curl -fsSL ${clienthooksConfigAddr}`)
-  .to('clienthooks.js');
+  .to('./clienthooks.js');
