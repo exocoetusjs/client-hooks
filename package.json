@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/crux-wild/client-hooks#readme",
   "dependencies": {
+    "chalk": "^1.1.3",
     "shelljs": "^0.7.3"
   }
 }
