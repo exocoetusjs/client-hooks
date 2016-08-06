@@ -1,9 +1,9 @@
 # client-hooks
 
 ```javascript
-// @TODO: Extra ./plugins/* into npm package.
+// @TODO: Need to design a `CLI` user interface.
 ```
 
 ```javascript
-// @TODO: Need to design a `CLI` user interface.
+// @FIXME: node child process preserves color.
 ```
