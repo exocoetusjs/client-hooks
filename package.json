@@ -1,6 +1,6 @@
 {
   "name": "client-hooks",
-  "version": "0.2.6",
+  "version": "0.3.2",
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/crux-wild/client-hooks#readme",
   "dependencies": {
     "chalk": "^1.1.3",
+    "cli-table": "^0.3.1",
     "shelljs": "^0.7.3"
   }
 }
