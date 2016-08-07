@@ -1,8 +1,12 @@
 const addr = require('../config/addr');
 
+const download = require('download');
+
 const shell = require('shelljs');
 
 const chalk = require('chalk');
+
+const fs = require('fs');
 
 function newline() {
   process.stdout.write('\n');
@@ -53,7 +57,9 @@ function copy_git_config() {
 
   logger_operate('copy', `${filename}`);
 
-  shell.exec(`curl -fsSL ${url} > ./${filename}`);
+  download(url).then((data) => {
+    fs.writeFileSync(`./${filename}`, data);
+  });
 
   shell.exec(`git config --local include.path "../${filename}"`);
 }
@@ -71,7 +77,9 @@ function copy_client_hooks_config() {
 
   logger_operate('copy', `${filename}`);
 
-  shell.exec(`curl -fsSL ${url} > ./${filename}`);
+  download(url).then((data) => {
+    fs.writeFileSync(`./${filename}`, data);
+  });
 }
 
 function remove_git_config() {
