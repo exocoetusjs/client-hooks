@@ -33,13 +33,11 @@ function remove(filename = '') {
 function logger_operate(operate = '', filepath = '') {
   const colon = chalk.bold.blue('::');
 
-  const backtick = chalk.bold.red('`');
-
   const oper = chalk.bold(operate);
 
   const file = chalk.bgBlack(filepath);
 
-  console.log(`${colon} ${oper} ${backtick}${file}${backtick} ...`);
+  console.log(`${colon} ${oper} ${file} ...`);
 }
 
 function copy_git_config() {
