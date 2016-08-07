@@ -1,12 +1,10 @@
 {
   "name": "client-hooks",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
     "install": "node scripts/install.js",
-    "preinstall": "node scripts/preinstall.js",
-    "preuninstall": "node scripts/preuninstall.js",
     "postuninstall": "node scripts/postuninstall.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
