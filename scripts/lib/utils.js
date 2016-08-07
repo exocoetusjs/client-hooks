@@ -47,13 +47,16 @@ function copy_git_config() {
 
   const bakname = `${filename}.bak`;
 
+  const url = addr[filename];
+
+
   if (shell.test('-f', `./${filename}`)) {
     shell.mv(`./${filename}`, `./${bakname}`);
   }
 
   logger_operate('copy', `${filename}`);
 
-  shell.exec(`curl -fsSL ${addr.gitconfig} > ./${filename}`);
+  shell.exec(`curl -fsSL ${url} > ./${filename}`);
 
   shell.exec(`git config --local include.path "../${filename}"`);
 }
@@ -63,13 +66,15 @@ function copy_client_hooks_config() {
 
   const bakname = `${filename}.bak`;
 
+  const url = addr[filename];
+
   if (shell.test('-f', `./${filename}`)) {
     shell.mv('./clienthooks.js', `./${filename}`);
   }
 
   logger_operate('copy', `${filename}`);
 
-  shell.exec(`curl -fsSL ${addr.hooksconfig} > ./${filename}`);
+  shell.exec(`curl -fsSL ${url} > ./${filename}`);
 }
 
 function remove_git_config() {
