@@ -49,7 +49,6 @@ function copy_git_config() {
 
   const url = addr[filename];
 
-
   if (shell.test('-f', `./${filename}`)) {
     shell.mv(`./${filename}`, `./${bakname}`);
   }
