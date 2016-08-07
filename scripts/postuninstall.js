@@ -1,17 +1,14 @@
 'use strict';
 
-const shell = require('shelljs');
+const utils = require('./lib/utils');
 
-shell.config.fatal = true;
+const shell = require('shelljs');
 
 shell.cd('../../');
 
-if (shell.test('-f', './.gitconfig')) {
-  shell.rm('./.gitconfig');
-}
+utils.remove('.gitconfig');
 
-shell.exec('git config --local --unset include.path');
+utils.remove('clienthooks.js');
 
-if (shell.test('-f', './clienthooks.js')) {
-  shell.rm('./clienthooks.js');
-}
+utils.newline();
+

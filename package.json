@@ -1,12 +1,11 @@
 {
   "name": "client-hooks",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
     "install": "node scripts/install.js",
-    "postuninstall": "node scripts/postuninstall.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postuninstall": "node scripts/postuninstall.js"
   },
   "repository": {
     "type": "git",
