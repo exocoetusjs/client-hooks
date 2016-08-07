@@ -1,0 +1,13 @@
+; This configuartion is for different user to share `git` configuartion.
+;
+; This configuartion only take effect in git(v2.9.0 or more recent).
+; Please use the `git -v` to check first.
+;
+; The default configuartion file will not be loaded by `git`.
+; Please execute the follwing command to take effect locallly.
+; `git config --local include.path "../.gitconfig"`
+
+; This configuartion item is used by `git client`,
+; please don't manually modify !!
+[core]
+  hooksPath="node_modules/client-hooks/hooks"
