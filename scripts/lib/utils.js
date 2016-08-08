@@ -68,14 +68,16 @@ function deal_exist_file(filename = '') {
   const result = co(function *() {
     const bakname = `${filename}.bak`;
 
-    const answers = yield get_user_answers(filename);
+    let answers = yield get_user_answers(filename);
+
+    answers = answers['deal exist file'];
 
     if (answers === 'remove') {
       return shell.rm(`./${filename}`);
     } else if (answers === 'backup') {
       return shell.mv(`./${filename}`, `./${bakname}`);
     } else if (answers === 'keep') {
-      return false;
+      return 'keep';
     }
   });
   return result;
@@ -87,13 +89,15 @@ function copy_git_config() {
 
     const url = addr[filename];
 
-    yield deal_exist_file(filename);
+    const result = yield deal_exist_file(filename);
 
-    logger_operate('copy', `${filename}`);
+    if (result !== 'keep') {
+      logger_operate('copy', `${filename}`);
 
-    const file =  yield download(url);
+      const file =  yield download(url);
 
-    fs.writeFileSync(`./${filename}`, file);
+      fs.writeFileSync(`./${filename}`, file);
+    }
 
     return shell.exec(`git config --local include.path "../${filename}"`);
   });
@@ -106,13 +110,15 @@ function copy_client_hooks_config() {
 
     const url = addr[filename];
 
-    yield deal_exist_file(filename);
+    const result =  yield deal_exist_file(filename);
 
-    logger_operate('copy', `${filename}`);
+    if (result !== 'keep') {
+      logger_operate('copy', `${filename}`);
 
-    const file = yield download(url);
+      const file = yield download(url);
 
-    fs.writeFileSync(`./${filename}`, file);
+      fs.writeFileSync(`./${filename}`, file);
+    }
   });
   return result;
 }
