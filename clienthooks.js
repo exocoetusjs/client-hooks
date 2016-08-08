@@ -75,12 +75,12 @@ module.exports = {
   */
   'pre-rebase': [],
   /**
-   * ## PREPARE-COMMIT-MSG**
+   * ## PREPARE-COMMIT-MSG
    *
    * This hook is invoked by git commit right after preparing the default log
    * message, and before the editor is started.
    *
    * [More Detail](https://git-scm.com/docs/githooks#pre-commit-msg)
   */
-  'prepare-commit-msg': []
+  'prepare-commit-msg': [],
 };
