@@ -4,11 +4,14 @@ const utils = require('./lib/utils');
 
 const shell = require('shelljs');
 
-shell.cd('../../');
+const co = require('co');
 
-utils.copy('.gitconfig');
+co(function *() {
+  shell.cd('../../');
 
-utils.copy('clienthooks.js');
+  yield utils.copy('.gitconfig');
 
-utils.newline();
+  yield utils.copy('clienthooks.js');
 
+  utils.newline();
+});

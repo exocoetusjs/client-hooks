@@ -1,4 +1,8 @@
+'use strict';
+
 const addr = require('../config/addr');
+
+const inquirer = require('inquirer');
 
 const download = require('download');
 
@@ -8,19 +12,21 @@ const chalk = require('chalk');
 
 const fs = require('fs');
 
+const co = require('co');
+
 function newline() {
   process.stdout.write('\n');
 }
 
 function copy(filename = '') {
-  switch (filename) {
-    case '.gitconfig':
-      copy_git_config();
-      break;
-    case 'clienthooks.js':
-      copy_client_hooks_config();
-      break;
-  }
+  const result = co(function*() {
+    if (filename === '.gitconfig') {
+      return copy_git_config();
+    } else if (filename === 'clienthooks.js') {
+      return copy_client_hooks_config();
+    }
+  });
+  return result;
 }
 
 function remove(filename = '') {
@@ -44,42 +50,71 @@ function logger_operate(operate = '', filepath = '') {
   console.log(`${colon} ${oper} ${file} ...`);
 }
 
-function copy_git_config() {
-  const filename = '.gitconfig';
-
-  const bakname = `${filename}.bak`;
-
-  const url = addr[filename];
+function get_user_answers(filename = '') {
+  let answers = 'keep';
 
   if (shell.test('-f', `./${filename}`)) {
-    shell.mv(`./${filename}`, `./${bakname}`);
+    answers = inquirer.prompt([{
+      type: 'list',
+      name: 'deal exist file',
+      choices: ['remove', 'backup', 'keep'],
+      message: `${filename} already exist, what you want to do?`,
+    }])
   }
+  return Promise.resolve(answers);
+}
 
-  logger_operate('copy', `${filename}`);
+function deal_exist_file(filename = '') {
+  const result = co(function *() {
+    const bakname = `${filename}.bak`;
 
-  download(url).then((data) => {
-    fs.writeFileSync(`./${filename}`, data);
+    const answers = yield get_user_answers();
+
+    if (answers === 'remove') {
+      return shell.rm(`./${filename}`);
+    } else if (answers === 'backup') {
+      return shell.mv(`./${filename}`, `./${bakname}`);
+    } else if (answers === 'keep') {
+      return false;
+    }
   });
+  return result;
+}
 
-  shell.exec(`git config --local include.path "../${filename}"`);
+function copy_git_config() {
+  const result = co(function *() {
+    const filename = '.gitconfig';
+
+    const url = addr[filename];
+
+    yield deal_exist_file(filename);
+
+    logger_operate('copy', `${filename}`);
+
+    const file =  yield download(url);
+
+    fs.writeFileSync(`./${filename}`, file);
+
+    return shell.exec(`git config --local include.path "../${filename}"`);
+  });
+  return result;
 }
 
 function copy_client_hooks_config() {
-  const filename = 'clienthooks.js';
+  const result = co(function *() {
+    const filename = 'clienthooks.js';
 
-  const bakname = `${filename}.bak`;
+    const url = addr[filename];
 
-  const url = addr[filename];
+    deal_exist_file(filename);
 
-  if (shell.test('-f', `./${filename}`)) {
-    shell.mv('./clienthooks.js', `./${filename}`);
-  }
+    logger_operate('copy', `${filename}`);
 
-  logger_operate('copy', `${filename}`);
+    const file = yield download(url);
 
-  download(url).then((data) => {
-    fs.writeFileSync(`./${filename}`, data);
+    fs.writeFileSync(`./${filename}`, file);
   });
+  return result;
 }
 
 function remove_git_config() {
