@@ -68,7 +68,7 @@ function deal_exist_file(filename = '') {
   const result = co(function *() {
     const bakname = `${filename}.bak`;
 
-    const answers = yield get_user_answers();
+    const answers = yield get_user_answers(filename);
 
     if (answers === 'remove') {
       return shell.rm(`./${filename}`);
@@ -106,7 +106,7 @@ function copy_client_hooks_config() {
 
     const url = addr[filename];
 
-    deal_exist_file(filename);
+    yield deal_exist_file(filename);
 
     logger_operate('copy', `${filename}`);
 
