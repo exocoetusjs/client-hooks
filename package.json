@@ -4,6 +4,7 @@
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
+    "preinstall": "node scripts/preinstall.js",
     "install": "node scripts/install.js",
     "postuninstall": "node scripts/postuninstall.js"
   },
