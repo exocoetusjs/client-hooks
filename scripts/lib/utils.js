@@ -138,10 +138,17 @@ function copy_client_hooks_config() {
 function check_git() {
   let version = shell.exec('git --version');
 
+  const error = chalk.red('ERR!');
+
+  const level = '2.9.0';
+
   version = version.match(semverRegex())[0];
 
-  if (!(semver.gte(version, '2.9.0'))) {
-    process.stderr.write('git semver must greater or equal than `2.9.0`\n');
+  if (!(semver.gte(version, level))) {
+    const message = `${error} git must greater or equal than ${level}\n`;
+
+    process.stderr.write(message);
+
     process.exit(1);
   }
 }
@@ -149,10 +156,17 @@ function check_git() {
 function check_node() {
   let version = shell.exec('node -v');
 
+  const error = chalk.red('ERR!');
+
+  const level = '6.3.1';
+
   version = version.match(semverRegex())[0];
 
-  if (!(semver.gte(version, '6.3.1'))) {
-    process.stderr.write('node semver must greater or equal than `6.3.1`\n');
+  if (!(semver.gte(version, level))) {
+    const message = `${error} node must greater or equal than ${level}\n`;
+
+    process.stderr.write(message);
+
     process.exit(1);
   }
 }
