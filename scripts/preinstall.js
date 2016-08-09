@@ -8,14 +8,7 @@ process.chdir('../../');
 
 exec(checkGitRepo, (error) => {
   if (error) {
-    const title = '\x1b[31mERR!';
-
-    const message = '\x1b[0mcurrent directory must be a `git` repo\n';
-
-    const error = `${title} ${message}`;
-
-    process.stderr.write(error);
-
+    process.stderr.write('ERR! current directory must be a `git` repo\n');
     process.exit(1);
   }
 });
