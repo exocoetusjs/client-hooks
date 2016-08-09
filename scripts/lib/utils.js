@@ -2,9 +2,13 @@
 
 const addr = require('../config/addr');
 
+const semverRegex = require('semver-regex');
+
 const inquirer = require('inquirer');
 
 const download = require('download');
+
+const semver = require('semver');
 
 const shell = require('shelljs');
 
@@ -16,6 +20,14 @@ const co = require('co');
 
 function newline() {
   process.stdout.write('\n');
+}
+
+function check(command = '') {
+  if (command === 'git') {
+    check_git();
+  } else if (command === 'node') {
+    check_node();
+  }
 }
 
 function copy(filename = '') {
@@ -123,6 +135,28 @@ function copy_client_hooks_config() {
   return result;
 }
 
+function check_git() {
+  let version = shell.exec('git --version');
+
+  version = version.match(semverRegex())[0];
+
+  if (!(semver.gte(version, '2.9.0'))) {
+    process.stderr.write('git semver must greater or equal than `2.9.0`\n');
+    process.exit(1);
+  }
+}
+
+function check_node() {
+  let version = shell.exec('node -v');
+
+  version = version.match(semverRegex())[0];
+
+  if (!(semver.gte(version, '6.3.1'))) {
+    process.stderr.write('node semver must greater or equal than `6.3.1`\n');
+    process.exit(1);
+  }
+}
+
 function remove_git_config() {
   const filename = '.gitconfig';
 
@@ -147,6 +181,7 @@ function remove_client_hooks_config() {
 
 module.exports = {
   copy: copy,
+  check: check,
   remove: remove,
   newline: newline,
 };

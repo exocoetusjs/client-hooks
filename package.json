@@ -1,11 +1,11 @@
 {
   "name": "client-hooks",
-  "version": "0.4.4",
+  "version": "0.4.8",
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node scripts/preinstall.js",
     "install": "node scripts/install.js",
+    "preinstall": "node scripts/preinstall.js",
     "postuninstall": "node scripts/postuninstall.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   ],
   "author": "crux",
   "engines": {
+    "git": ">=2.9.0",
     "node": ">=6.3.1"
   },
   "license": "MIT",
@@ -34,6 +35,8 @@
     "co": "^4.6.0",
     "download": "^5.0.2",
     "inquirer": "^1.1.2",
+    "semver": "^5.3.0",
+    "semver-regex": "^1.0.0",
     "shelljs": "^0.7.3"
   }
 }

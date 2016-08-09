@@ -1,11 +1,14 @@
 'use strict';
 
-const semverUtils = require('semver-utils');
+var exec = require('child_process').exec;
 
-const semver = require('semver');
+var checkGitRepo = '[ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1';
 
-const shell = require('shelljs');
+process.chdir('../../');
 
-const git_ver = shell.exec('git --version');
-
-console.log(semverUtils.parse(git_ver));
+exec(checkGitRepo, function(error) {
+  if (error) {
+    process.stderr.write('current directory must be a `git` repo\n');
+    process.exit(1);
+  }
+});
