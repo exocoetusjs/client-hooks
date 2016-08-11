@@ -9,7 +9,7 @@
 
 ## Sample `clienthooks.js`
 
-This file will trigger when you run `git push`.
+When you run `git push` will automatic execte `es6` code style lint.
 
 ```javascript
 /*******************************************************************************
