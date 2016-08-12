@@ -25,8 +25,8 @@ client-hooks is a plugin-based client hooks management.
 ### Prerequisites
 
 - The installation directory need is a `git` repository.
-- Current system install `git`(version >= 2.9.0).
-- Current system install `node`(version >= 6.3.1).
+- Current system install [Git](https://git-scm.com)(version >= `2.9.0`).
+- Current system install [Node](https://nodejs.org)(version >= `6.3.1`).
 
 ### Basci Installation
 
