@@ -1,4 +1,4 @@
-# client-hooks [![NPM version][npm-version]][npm-url][![GitHub issues][github-issue]][issue-url][![GitHub forks][github-forks]][fork-url][![GitHub stars][github-star]][star-url]
+# client-hooks [![NPM version][npm-version]][npm-url] [![GitHub issues][github-issue]][issue-url] [![GitHub forks][github-forks]][fork-url] [![GitHub stars][github-star]][star-url]
 
 ## Brief Introduction
 
