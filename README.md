@@ -1,5 +1,7 @@
 # client-hooks
 
+[![asciicast](https://asciinema.org/a/89e3rpuw6557jvreskcj43u0u.png)](https://asciinema.org/a/89e3rpuw6557jvreskcj43u0u)
+
 ## Brief Introduction
 
 client-hooks is a plugin-based client hooks management.
