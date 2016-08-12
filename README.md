@@ -1,6 +1,6 @@
 # client-hooks
 
-[![asciicast](https://asciinema.org/a/89e3rpuw6557jvreskcj43u0u.png)](https://asciinema.org/a/89e3rpuw6557jvreskcj43u0u?autoplay=1)
+[![asciicast](https://asciinema.org/a/4agoit6uwkinwm0032phtayo6.png)](https://asciinema.org/a/4agoit6uwkinwm0032phtayo6?autoplay=1)
 
 ## Brief Introduction
 
