@@ -2,6 +2,8 @@
 
 ## What is client-hooks?
 
+client-hooks is a plugin-based client hooks management.
+
 - **High performance:** `client-hooks` introduce competition meachanism.
   parallel execution plugin, once any of plugin error occurred, immediately
   locate the problem.
@@ -26,6 +28,6 @@
 
 ### Installation
 
-```sh
+```bash
 npm install --save-dev client-hooks
 ```
