@@ -4,6 +4,8 @@
 
 <a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
 
+## Features
+
 client-hooks is a plugin-based client hooks management.
 
 - **High performance:** `client-hooks` introduce competition meachanism.
