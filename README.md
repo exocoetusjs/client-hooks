@@ -1,5 +1,4 @@
-# client-hooks [![NPM version][npm-version]][npm-url] [![GitHub issues][github-issue]][issue-url] [![GitHub forks][github-forks]][fork-url] [![GitHub stars][github-star]][star-url]
-
+# client-hooks [![NPM version][npm-version]][npm-url]
 ## Brief Introduction
 
 <a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
@@ -58,12 +57,3 @@ client-hooks is released under [MIT License](https://github.com/crux-wild/client
 
 [npm-url]: https://www.npmjs.com/package/client-hooks
 [npm-version]: https://badge.fury.io/js/client-hooks.svg
-
-[issue-url]: https://github.com/crux-wild/client-hooks/issues
-[github-issue]: https://img.shields.io/github/issues/crux-wild/client-hooks.svg
-
-[fork-url]: https://github.com/crux-wild/client-hooks/network
-[github-forks]: https://img.shields.io/github/forks/crux-wild/client-hooks.svg
-
-[star-url]: https://github.com/crux-wild/client-hooks/stargazers
-[github-star]: https://img.shields.io/github/stars/crux-wild/client-hooks.svg
