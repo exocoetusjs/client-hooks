@@ -15,3 +15,19 @@
 - **Simple:** through plugin encapsulate complex logic inside. for `git`
   repository manager, only need care current repository wath features are 
   required.
+
+## Getting Started
+
+### Prerequisites
+
+- The installation directory need is a `git` repository.
+- Current system install `git`(version >= 2.9.0).
+- Current system install `node`(version >= 6.3.1).
+
+### Installation
+
+**Install the `client-hooks` by `npm`:**
+
+```
+npm install --save-dev client-hooks
+```
