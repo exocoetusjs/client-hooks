@@ -17,7 +17,7 @@ client-hooks is a plugin-based client hooks management.
   expand its functionality in the form of custome plugins.
 
 - **Simple:** through plugin encapsulate complex logic inside. for `git`
-  repository manager, only need care current repository wath features are
+  repository manager, only need care current repository what features are
   required.
 
 ## Getting Started
