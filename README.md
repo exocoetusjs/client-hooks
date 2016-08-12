@@ -26,7 +26,7 @@
 
 ### Installation
 
-**Install the `client-hooks` by `npm`:**
+Install the `client-hooks` by `npm`:
 
 ```
 npm install --save-dev client-hooks
