@@ -1,6 +1,7 @@
 # client-hooks
 
 [![NPM version][npm-version]][npm-url]
+
 ## Brief Introduction
 
 <a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
@@ -41,4 +42,5 @@ npm install --save-dev client-hooks
 
 client-hooks is released under [MIT License](https://github.com/crux-wild/client-hooks/blob/master/LICENSE)
 
-[npm-image]: https://www.npmjs.com/package/client-hooks
+[npm-url]: https://www.npmjs.com/package/client-hooks
+[npm-version]: https://badge.fury.io/js/client-hooks.svg
