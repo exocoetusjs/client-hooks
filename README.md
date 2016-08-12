@@ -1,6 +1,6 @@
 # client-hooks
 
-[![asciicast](https://asciinema.org/a/4agoit6uwkinwm0032phtayo6.png {width=600px})](https://asciinema.org/a/4agoit6uwkinwm0032phtayo6)
+<a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
 
 ## Brief Introduction
 
