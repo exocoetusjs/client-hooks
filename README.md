@@ -1,6 +1,6 @@
 # client-hooks
 
-## What is client-hooks?
+## Brief Introduction
 
 client-hooks is a plugin-based client hooks management.
 
@@ -26,7 +26,7 @@ client-hooks is a plugin-based client hooks management.
 - Current system install `git`(version >= 2.9.0).
 - Current system install `node`(version >= 6.3.1).
 
-### Installation
+### Basci Installation
 
 ```bash
 npm install --save-dev client-hooks
