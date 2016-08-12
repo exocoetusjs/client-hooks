@@ -41,7 +41,7 @@ npm install --save-dev client-hooks
 **Special thanks to the generous sponsorship by:**
 
 <a href="https://www.jimu.com">
-  <img src="https://page.jimu.com/content-dist/images/default/logo.png">
+  <img width="200px" src="https://page.jimu.com/content-dist/images/default/logo.png">
 </a>
 
 <a href="https://merak.jimu.com">
