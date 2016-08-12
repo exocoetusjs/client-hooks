@@ -26,6 +26,6 @@
 
 ### Installation
 
-```
+```sh
 npm install --save-dev client-hooks
 ```
