@@ -1,6 +1,4 @@
-# client-hooks
-
-[![NPM version][npm-version]][npm-url]
+# client-hooks [![NPM version][npm-version]][npm-url]
 
 ## Brief Introduction
 
