@@ -9,5 +9,7 @@
 - **Automation:** no manulal run command. configuration tasks will be automation
   executed by `git`.
 
-- **Plugin-based**
-- **Simple**
+- **Plugin-based:** `client-hooks` merely provides a core mechanism. you can
+  expand its functionality in the form of custome plugins.
+
+- **Simple:** 
