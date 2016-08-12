@@ -48,6 +48,8 @@ npm install --save-dev client-hooks
   <img src="https://merak.jimu.com/content-dist/images/common/logo_colored-f66042201f.png">
 </a>
 
+Support the completion of the project team can not be separated.
+
 ## Contribute
 
 ### License
