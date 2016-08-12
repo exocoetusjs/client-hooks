@@ -12,4 +12,6 @@
 - **Plugin-based:** `client-hooks` merely provides a core mechanism. you can
   expand its functionality in the form of custome plugins.
 
-- **Simple:** 
+- **Simple:** through plugin encapsulate complex logic inside. for `git`
+  repository manager, only need care current repository wath features are 
+  required.
