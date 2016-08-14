@@ -1,4 +1,13 @@
 # client-hooks [![NPM version][npm-version]][npm-url]
+
+```javascript
+// @TODO: Adaptation server-side.
+```
+
+```javascript
+// @TODO: Plugin can be configured to require.
+```
+
 ## Brief Introduction
 
 <a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
@@ -53,7 +62,7 @@ support the completion of the project team can not be separated.
 
 ### License
 
-client-hooks is released under [MIT License](https://github.com/crux-wild/client-hooks/blob/master/LICENSE)
+client-hooks is released under [MIT License](https://github.com/crux-wild/client-hooks/blob/master/LICENSE).
 
 [npm-url]: https://www.npmjs.com/package/client-hooks
 [npm-version]: https://badge.fury.io/js/client-hooks.svg
