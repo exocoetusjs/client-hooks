@@ -16,6 +16,8 @@ const shell = require('shelljs');
 
 const chalk = require('chalk');
 
+const path = require('path');
+
 const fs = require('fs');
 
 const co = require('co');
@@ -31,6 +33,12 @@ function check(command = '') {
     check_dir();
   } else if (command === 'node') {
     check_node();
+  }
+}
+
+function make(filename = '') {
+  if (filename === '.clienthooks') {
+    make_client_hooks(filename);
   }
 }
 
@@ -97,6 +105,18 @@ function deal_exist_file(filename = '') {
     }
   });
   return result;
+}
+
+function make_client_hooks(filename = '') {
+  const pwd = shell.pwd().toString();
+
+  const filePath = path.join(pwd, filename);
+
+  if (!shell.test('-d', filePath)) {
+    logger_operate('make', `${filename}`);
+
+    shell.mkdir('-p', filePath);
+  }
 }
 
 function copy_git_config() {
@@ -214,6 +234,7 @@ function remove_client_hooks_config() {
 }
 
 module.exports = {
+  make: make,
   copy: copy,
   check: check,
   remove: remove,
