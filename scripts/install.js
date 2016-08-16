@@ -11,6 +11,8 @@ shell.config.silent = true;
 co(function *() {
   shell.cd('../../');
 
+  utils.check('dir');
+
   utils.check('git');
 
   utils.check('node');

@@ -2,6 +2,8 @@
 
 const addr = require('../config/addr');
 
+const exec = require('child_process').exec;
+
 const semverRegex = require('semver-regex');
 
 const inquirer = require('inquirer');
@@ -25,6 +27,8 @@ function newline() {
 function check(command = '') {
   if (command === 'git') {
     check_git();
+  } else if (command === 'dir') {
+    check_dir();
   } else if (command === 'node') {
     check_node();
   }
@@ -135,6 +139,22 @@ function copy_client_hooks_config() {
   return result;
 }
 
+function check_dir() {
+  const check_dir = '[ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1';
+
+  const git = chalk.bgBlack('`git`');
+
+  const error = chalk.red('ERR!');
+
+  if (shell.exec(check_dir).code !== 0) {
+    const message = `${error} current directory must be a ${git} repo.\n\n`;
+
+    process.stderr.write(message);
+
+    process.exit(1);
+  }
+}
+
 function check_git() {
   let version = shell.exec('git --version');
 
@@ -145,7 +165,7 @@ function check_git() {
   version = version.match(semverRegex())[0];
 
   if (!(semver.gte(version, level))) {
-    const message = `${error} git must greater or equal than ${level}\n`;
+    const message = `${error} git must greater or equal than ${level}.\n\n`;
 
     process.stderr.write(message);
 
@@ -163,7 +183,7 @@ function check_node() {
   version = version.match(semverRegex())[0];
 
   if (!(semver.gte(version, level))) {
-    const message = `${error} node must greater or equal than ${level}\n`;
+    const message = `${error} node must greater or equal than ${level}.\n\n`;
 
     process.stderr.write(message);
 

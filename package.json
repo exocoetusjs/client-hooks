@@ -1,11 +1,10 @@
 {
   "name": "client-hooks",
-  "version": "0.5.9",
+  "version": "0.6.3",
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
     "install": "node scripts/install.js",
-    "preinstall": "node scripts/preinstall.js",
     "postuninstall": "node scripts/postuninstall.js"
   },
   "repository": {
