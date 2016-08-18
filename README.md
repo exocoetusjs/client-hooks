@@ -1,4 +1,8 @@
-# client-hooks [![NPM version][npm-version]][npm-url]
+<p align="center">
+  <img src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.svg" alt="">
+</p>
+
+[![NPM version][npm-version]][npm-url]
 
 ```javascript
 // @TODO: Adaptation server-side.
