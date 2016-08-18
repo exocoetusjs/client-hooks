@@ -2,6 +2,7 @@
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
+  <p></p>
 </p>
 
 [![NPM version][npm-version]][npm-url] [![Crates.io][download-rate]][npm-url] [![GitHub license][license]][license-url]
