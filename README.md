@@ -1,8 +1,9 @@
 ## client-hooks
 
 <p>
-  <img width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
-  <p></p>
+  <img width="280" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
+  <p style="float: right;">
+  </p>
 </p>
 
 [![NPM version][npm-version]][npm-url] [![Crates.io][download-rate]][npm-url] [![GitHub license][license]][license-url]
