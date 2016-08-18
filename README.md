@@ -3,7 +3,7 @@
 <p>
   <img style="float: right;" width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
   <p>
-    This requires some advertising slogan
+    In a calm sea in the sky flying fish...
   </p>
 </p>
 
