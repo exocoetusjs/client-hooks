@@ -1,8 +1,8 @@
 ## client-hooks
 
 <p>
-  <img width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
-  <p style="float: right;">
+  <img style="float: right;" width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
+  <p>
     This requires some advertising slogan
   </p>
 </p>
