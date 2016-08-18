@@ -3,6 +3,7 @@
 <p>
   <img width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
   <p style="float: right;">
+    This requires some advertising slogan
   </p>
 </p>
 
