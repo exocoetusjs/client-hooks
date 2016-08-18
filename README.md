@@ -1,7 +1,7 @@
 ## client-hooks
 
 <p>
-  <img width="280" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
+  <img width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
   <p style="float: right;">
   </p>
 </p>
