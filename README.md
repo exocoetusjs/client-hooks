@@ -1,8 +1,6 @@
 ## client-hooks
 
-<p>
-  <img style="float: right;" width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
-</p>
+<img style="float: right;" width="320" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
 
 **Explanation:** a flying fish in the calm sea in the sky...
 
