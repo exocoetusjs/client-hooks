@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
-  <p align="center">client-hooks is a plugin-based client hooks management.</p>
+  <img width="242" height="220" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
 </p>
 
 [![NPM version][npm-version]][npm-url]
