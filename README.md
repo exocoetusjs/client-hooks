@@ -2,10 +2,9 @@
 
 <p>
   <img style="float: right;" width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
-  <p>
-    In a calm sea in the sky flying fish...
-  </p>
 </p>
+
+**Explanation:** a flying fish in the calm sea in the sky...
 
 [![NPM version][npm-version]][npm-url] [![Crates.io][download-rate]][npm-url] [![GitHub license][license]][license-url]
 
