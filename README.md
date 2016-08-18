@@ -5,7 +5,7 @@
   <p align="center">from the calm waters of the flying fish leap into the sky.</p>
 </p>
 
-[![NPM version][npm-version]][npm-url] [![Crates.io][download-rate]][npm-url]
+[![NPM version][npm-version]][npm-url] [![Crates.io][download-rate]][npm-url] [![GitHub license][license]][license-url]
 
 ## Brief Introduction
 
@@ -62,7 +62,8 @@ support the completion of the project team can not be separated.
 ### License
 
 client-hooks is released under [MIT License](https://github.com/crux-wild/client-hooks/blob/master/LICENSE).
-
 [npm-url]: https://www.npmjs.com/package/client-hooks
 [download-rate]: https://img.shields.io/crates/d/rustc-serialize.svg?maxAge=2592000
 [npm-version]: https://badge.fury.io/js/client-hooks.svg
+[license-url]:https://raw.githubusercontent.com/clienthooksjs/client-hooks/master/LICENSE
+[license]: https://img.shields.io/badge/license-MIT-blue.svg
