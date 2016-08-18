@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.svg" alt="">
+  <img src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
 </p>
 
 [![NPM version][npm-version]][npm-url]
