@@ -1,4 +1,4 @@
-## Client Hooks
+## client-hooks
 
 <p>
   <img width="300" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
