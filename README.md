@@ -2,7 +2,7 @@
 
 [![NPM version][npm-version]][npm-url] [![Crates.io][download-rate]][npm-url] [![GitHub license][license]][license-url]
 
-<img style="float: right;" width="320" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
+<img style="float: right;" width="350" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
 
 **Explanation:** a flying fish in the calm sea in the sky...
 
