@@ -4,14 +4,6 @@
 
 [![NPM version][npm-version]][npm-url]
 
-```javascript
-// @TODO: Adaptation server-side.
-```
-
-```javascript
-// @TODO: Plugin can be configured to require.
-```
-
 ## Brief Introduction
 
 <a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
