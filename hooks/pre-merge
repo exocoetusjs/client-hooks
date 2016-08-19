@@ -1,4 +1,4 @@
-!/usr/bin/env node
+#!/usr/bin/env node
 
 'use strict';
 
@@ -6,10 +6,12 @@ const path = require('path');
 
 const ClientHook = require('../lib/ClientHook.js');
 
-const cwd = process.cwd();
-
 const hookName = path.basename(__filename);
 
-const clientHook = new ClientHook({ hookName, cwd });
+const cwd = process.cwd();
+
+const argv = process.argv;
+
+const clientHook = new ClientHook({ hookName, cwd, argv });
 
 clientHook.start();
