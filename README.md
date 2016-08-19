@@ -4,7 +4,7 @@
 
 <img style="float: right;" width="330" src="https://raw.githubusercontent.com/clienthooksjs/artwork/master/client-hooks-logo.png" alt="">
 
-**Explanation:** a flying fish in the calm sea in the sky...
+**Explanation:** a exocoetu leap into the sky in the calm sea ...
 
 ## Brief Introduction
 
