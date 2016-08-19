@@ -61,6 +61,8 @@ function remove(filename = '') {
     case 'clienthooks.js':
       remove_client_hooks_config();
       break;
+    case '.clienthooks':
+      remove_client_hooks_config_dir();
   }
 }
 
@@ -230,6 +232,16 @@ function remove_client_hooks_config() {
 
   if (shell.test('-f', `./${filename}`)) {
     shell.rm(`./${filename}`);
+  }
+}
+
+function remove_client_hooks_config_dir() {
+  const dirname = '.clienthooks';
+
+  logger_operate('remove', `${dirname}`);
+
+  if (shell.test('-d', `./${dirname}`)) {
+    shell.rm('-rf', `./${dirname}`);
   }
 }
 

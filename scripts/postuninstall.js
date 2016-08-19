@@ -10,5 +10,7 @@ utils.remove('.gitconfig');
 
 utils.remove('clienthooks.js');
 
+utils.remove('.clienthooks');
+
 utils.newline();
 
