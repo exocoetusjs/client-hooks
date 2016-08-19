@@ -76,7 +76,7 @@ function logger_operate(operate = '', filepath = '') {
   console.log(`${colon} ${oper} ${file} ...`);
 }
 
-function get_user_answers(filename = '') {
+function get_config_answers(filename = '') {
   let answers = 'keep';
 
   if (shell.test('-f', `./${filename}`)) {
@@ -90,11 +90,25 @@ function get_user_answers(filename = '') {
   return Promise.resolve(answers);
 }
 
+function get_environment_answers(filename = '') {
+  let answers = 'clienthooks';
+
+  if (shell.test('-f', `./${filename}`)) {
+    answers = inquirer.prompt([{
+      type: 'list',
+      name: 'deal exist file',
+      choices: ['clienthooks', 'serverhooks'],
+      message: `select the operating environment?`,
+    }])
+  }
+  return Promise.resolve(answers);
+}
+
 function deal_exist_file(filename = '') {
   const result = co(function *() {
     const bakname = `${filename}.bak`;
 
-    let answers = yield get_user_answers(filename);
+    let answers = yield get_config_answers(filename);
 
     answers = answers['deal exist file'];
 
