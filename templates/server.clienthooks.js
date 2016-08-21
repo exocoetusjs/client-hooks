@@ -8,6 +8,16 @@
 *******************************************************************************/
 module.exports = {
   /**
+   * ## PRE-RECEIVE
+   * This hook is invoked by git-receive-pack on the remote repository, which
+   * happens when a git push is done on a local repository. Just before starting
+   * to update refs on the remote repository, the pre-receive hook is invoked.
+   * Its exit status determines the success or failure of the update.
+   *
+   * [More detail](https://git-scm.com/docs/githooks#pre-receive)
+   */
+  'pre-receive': []
+  /**
    * ## UPDATE
    *
    * This hook is invoked by git-receive-pack on the remote repository, which
