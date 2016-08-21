@@ -1,6 +1,6 @@
 {
   "name": "client-hooks",
-  "version": "0.7.4",
+  "version": "0.7.6",
   "description": "plugin-based client hooks management",
   "main": "index.js",
   "scripts": {
