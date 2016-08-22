@@ -8,7 +8,7 @@
 
 ## Brief Introduction
 
-<a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
+<a href="https://asciinema.org/a/83461" target="_blank"><img src="https://asciinema.org/a/83461.png" width="589"/></a>
 
 ## Features
 
@@ -64,6 +64,8 @@ client-hooks is released under [MIT License](https://github.com/crux-wild/client
 
 [npm-url]: https://www.npmjs.com/package/client-hooks
 [download-rate]: https://img.shields.io/crates/d/rustc-serialize.svg?maxAge=2592000
+
 [npm-version]: https://badge.fury.io/js/client-hooks.svg
 [license-url]:https://raw.githubusercontent.com/clienthooksjs/client-hooks/master/LICENSE
+
 [license]: https://img.shields.io/badge/license-MIT-blue.svg
