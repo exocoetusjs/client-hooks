@@ -8,7 +8,7 @@
 
 ## Brief Introduction
 
-<a href="https://asciinema.org/a/82511" target="_blank"><img src="https://asciinema.org/a/82511.png" width="589"/></a>
+<a href="https://asciinema.org/a/83461" target="_blank"><img src="https://asciinema.org/a/83461.png" width="589"/></a>
 
 ## Features
 
