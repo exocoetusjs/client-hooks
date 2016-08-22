@@ -1,4 +1,5 @@
 module.exports = {
   ".gitconfig": "https://raw.githubusercontent.com/crux-wild/client-hooks/master/.gitconfig",
-  "clienthooks.js": "https://raw.githubusercontent.com/crux-wild/client-hooks/master/clienthooks.js",
+  "client.clienthooks.js": "https://raw.githubusercontent.com/exocoetus/client-hooks/master/templates/client.clienthooks.js",
+  "server.clienthooks.js": "https://raw.githubusercontent.com/exocoetus/client-hooks/master/templates/server.clienthooks.js",
 };

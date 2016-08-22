@@ -90,17 +90,13 @@ function get_config_answers(filename = '') {
   return Promise.resolve(answers);
 }
 
-function get_environment_answers(filename = '') {
-  let answers = 'clienthooks';
-
-  if (shell.test('-f', `./${filename}`)) {
-    answers = inquirer.prompt([{
-      type: 'list',
-      name: 'deal exist file',
-      choices: ['clienthooks', 'serverhooks'],
-      message: `select the operating environment?`,
-    }])
-  }
+function get_environment_answers() {
+  const  answers = inquirer.prompt([{
+    type: 'list',
+    name: 'select environment',
+    choices: ['client', 'server'],
+    message: `select the operating environment ?`,
+  }]);
   return Promise.resolve(answers);
 }
 
@@ -137,6 +133,8 @@ function make_client_hooks(filename = '') {
 
 function copy_git_config() {
   const result = co(function *() {
+    const pwd = shell.pwd().toString();
+
     const filename = '.gitconfig';
 
     const url = addr[filename];
@@ -151,7 +149,7 @@ function copy_git_config() {
       fs.writeFileSync(`./${filename}`, file);
     }
 
-    return shell.exec(`git config --local include.path "../${filename}"`);
+    return shell.exec(`git config --local include.path "${pwd}/${filename}"`);
   });
   return result;
 }
@@ -160,12 +158,16 @@ function copy_client_hooks_config() {
   const result = co(function *() {
     const filename = 'clienthooks.js';
 
-    const url = addr[filename];
-
     const result =  yield deal_exist_file(filename);
 
     if (result !== 'keep') {
       logger_operate('copy', `${filename}`);
+
+      let environment = yield get_environment_answers();
+
+      environment = environment['select environment'];
+
+      const url = addr[`${environment}.${filename}`];
 
       const file = yield download(url);
 
