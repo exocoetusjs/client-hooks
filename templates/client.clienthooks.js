@@ -146,5 +146,5 @@ module.exports = {
    *
    * [More Detail](https://git-scm.com/docs/githooks#pre-auto-gc)
   */
- 'pre-auto-gc': [],
+  'pre-auto-gc': [],
 };

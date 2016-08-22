@@ -16,7 +16,7 @@ module.exports = {
    *
    * [More detail](https://git-scm.com/docs/githooks#pre-receive)
    */
-  'pre-receive': []
+  'pre-receive': [],
   /**
    * ## UPDATE
    *
